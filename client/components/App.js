@@ -5,10 +5,12 @@ import Header from './Header';
 import About from './About';
 import FeatureTitle from './FeatureTitle';
 import Features from './Features';
+import Nav from './Nav';
 
 export default function App () {
    return (
      <div>
+       <Nav />
        <Header />
        <About />
        <FeatureTitle />
