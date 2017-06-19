@@ -1,0 +1,73 @@
+{
+  "name": "create-nice-app",
+  "version": "1.0.8",
+  "description": "React/Express boilerplate generator",
+  "main": "server/runServer.js",
+  "repository": "https://github.com/brantstuns/create-nice-app",
+  "author": "Brant Stuns",
+  "license": "MIT",
+  "engines": {
+    "node": ">=6.10.3"
+  },
+  "bin": {
+    "create-nice-app": "bin/nice.js"
+  },
+  "scripts": {
+    "lint": "eslint -c eslint.config.json .",
+    "test": "yarn test:client && yarn test:server && yarn lint",
+    "test:coverage": "yarn test:client -- --coverage && yarn test:server -- --coverage",
+    "test:client": "jest -c client/jest.client.config.json",
+    "test:server": "jest -c server/jest.server.config.json",
+    "testw": "yarn test:client -- --watch",
+    "presendCoverage": "lcov-result-merger './coverage/**/lcov.info' ./coverage/lcov.info",
+    "sendCoverage": "echo '🕺  you need to set up code coverage integration with your tool of choice!  🕺'",
+    "webpack": "NODE_ENV='production' webpack --config webpack.prod.config.js",
+    "webpack:watch": "webpack --config webpack.dev.config.js",
+    "webpack:analyzer": "webpack --config webpack.dev.config.js --profile --json > stats.json && webpack-bundle-analyzer stats.json",
+    "server": "NODE_ENV='production' node server/runServer",
+    "server:watch": "NODE_ENV='development' nodemon --watch server/ server/runServer.js",
+    "prod": "NODE_ENV='production' yarn webpack && yarn server",
+    "dev": "npm-run-all --parallel server:watch webpack:watch"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-jest": "^20.0.0",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-react-transform": "^2.0.2",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.1",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^5.0.3",
+    "eslint-plugin-react": "^7.0.1",
+    "jest": "^20.0.0",
+    "jest-cli": "^20.0.0",
+    "jest-enzyme": "^3.1.0",
+    "lcov-result-merger": "^1.2.0",
+    "node-sass": "^4.5.2",
+    "nodemon": "^1.11.0",
+    "npm-run-all": "^4.0.2",
+    "react-test-renderer": "^15.5.4",
+    "sass-loader": "^6.0.5",
+    "style-loader": "^0.17.0",
+    "supertest": "^3.0.0",
+    "webpack-bundle-analyzer": "^2.8.1"
+  },
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "compression": "^1.6.2",
+    "enzyme": "^2.8.2",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "express": "^4.15.2",
+    "prop-types": "^15.5.8",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1",
+    "webpack": "^2.5.1"
+  }
+}
