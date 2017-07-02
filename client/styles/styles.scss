@@ -1,7 +1,7 @@
 @import 'app';
-@import 'party';
+@import 'header';
+@import 'section';
 
 body {
-  background-image: url('https://media.giphy.com/media/1M4w25h7a3PEs/giphy.gif');
-  background-size: cover;
+    margin-top: 50px; /* Required margin for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }

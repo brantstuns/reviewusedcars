@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 
 export default function App(props) {
   return (
-    <div className="app">
-      {props.children}
-    </div>
+      props.children
   );
 }
 
