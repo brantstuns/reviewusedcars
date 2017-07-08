@@ -18,16 +18,16 @@ export default function Nav() {
           <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul className="nav navbar-nav">
                   <li>
-                      <a href="#">Reviews</a>
+                      <Link to='/reviews'>Reviews</Link>
                   </li>
                   <li>
                       <Link to='/addReview'>Add A Review</Link>
                   </li>
                   <li>
-                      <a href="#">About</a>
+                      <Link to="/about">About</Link>
                   </li>
                   <li>
-                      <a href="#">Contact</a>
+                      <Link to="/contact">Contact</Link>
                   </li>
               </ul>
           </div>
