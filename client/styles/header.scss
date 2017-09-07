@@ -1,0 +1,24 @@
+.image-bg-fluid-height,
+.image-bg-fixed-height {
+    text-align: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.image-bg-fluid-height {
+  padding: 100px 0;
+}
+
+#header1 {
+  background: url('/images/header_img.jpeg') no-repeat center center scroll;
+}
+
+#header2 {
+  background: url('/images/header_img_2.jpeg') no-repeat center center scroll;
+}
+
+header {
+  min-height: 350px;
+}
